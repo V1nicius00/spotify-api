@@ -1,5 +1,9 @@
 package dev.vini.spotify_api.client;
 
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
+
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class LoginRequest {
 
     private String grantType;
