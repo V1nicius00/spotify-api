@@ -1,3 +1,3 @@
 # Spotify API
 
-Projeto com intuito de aprender a usar uma API que necessita de um token de acesso.
+Este projeto consiste em uma aplicação que consome dados da API do Spotify <a href="https://developer.spotify.com/">(Spotify for Developers)</a>
