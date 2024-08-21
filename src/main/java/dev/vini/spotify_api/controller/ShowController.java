@@ -27,8 +27,7 @@ public class ShowController {
     @GetMapping("/shows")
     public ResponseEntity<List<Show>> getShows(){
         var token = loginService.getAccessToken();
-        var shows = showService.getShows(token);
-        return ResponseEntity.ok(shows);
+        return ResponseEntity.ok(showService.getShows(token));
     }
 
 }
