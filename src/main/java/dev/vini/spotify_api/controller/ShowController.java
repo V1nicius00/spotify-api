@@ -4,6 +4,8 @@ import dev.vini.spotify_api.client.AuthSpotifyClient;
 import dev.vini.spotify_api.client.LoginRequest;
 import dev.vini.spotify_api.client.Show;
 import dev.vini.spotify_api.client.ShowSpotifyClient;
+import dev.vini.spotify_api.service.LoginService;
+import dev.vini.spotify_api.service.ShowService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,26 +17,18 @@ import java.util.List;
 @RequestMapping("/spotify/api")
 public class ShowController {
 
-    private final AuthSpotifyClient authSpotifyClient;
-
-    private final ShowSpotifyClient showSpotifyClient;
-
-    public ShowController(AuthSpotifyClient authSpotifyClient, ShowSpotifyClient showSpotifyClient) {
-        this.authSpotifyClient = authSpotifyClient;
-        this.showSpotifyClient = showSpotifyClient;
+    private final ShowService showService;
+    private final LoginService loginService;
+    public ShowController(ShowService showService, LoginService loginService) {
+        this.showService = showService;
+        this.loginService = loginService;
     }
 
     @GetMapping("/shows")
     public ResponseEntity<List<Show>> getShows(){
-        var request = new LoginRequest(
-                "client_credentials",
-                "your_client_id",
-                "your_client_secret"
-        );
-        var token = authSpotifyClient.login(request).getAccessToken();
-
-        var response = showSpotifyClient.getShows("Bearer " + token);
-        return ResponseEntity.ok(response.getShows());
+        var token = loginService.getAccessToken();
+        var shows = showService.getShows(token);
+        return ResponseEntity.ok(shows);
     }
 
 }
