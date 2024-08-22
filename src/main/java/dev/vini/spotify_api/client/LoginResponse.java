@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import feign.form.FormProperty;
 
+@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class LoginResponse {
 
     @FormProperty("access_token")
