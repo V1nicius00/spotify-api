@@ -1,9 +1,6 @@
 package dev.vini.spotify_api.controller;
 
-import dev.vini.spotify_api.client.AuthSpotifyClient;
-import dev.vini.spotify_api.client.LoginRequest;
 import dev.vini.spotify_api.client.Show;
-import dev.vini.spotify_api.client.ShowSpotifyClient;
 import dev.vini.spotify_api.service.LoginService;
 import dev.vini.spotify_api.service.ShowService;
 import org.springframework.http.ResponseEntity;

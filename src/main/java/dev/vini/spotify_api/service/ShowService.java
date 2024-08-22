@@ -1,7 +1,6 @@
 package dev.vini.spotify_api.service;
 
 import dev.vini.spotify_api.client.Show;
-import dev.vini.spotify_api.client.ShowResponse;
 import dev.vini.spotify_api.client.ShowSpotifyClient;
 import org.springframework.stereotype.Service;
 
