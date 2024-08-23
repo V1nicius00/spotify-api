@@ -15,7 +15,7 @@ public class ShowService {
         this.showSpotifyClient = showSpotifyClient;
     }
 
-    public List<Show> getShows(String token){
-        return showSpotifyClient.getShows("Bearer " + token).getShows();
+    public List<Show> getShows(String token, String ids){
+        return showSpotifyClient.getShows("Bearer " + token, ids).getShows();
     }
 }
