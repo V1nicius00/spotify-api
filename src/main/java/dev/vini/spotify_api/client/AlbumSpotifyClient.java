@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.RequestHeader;
 )
 public interface AlbumSpotifyClient {
 
-    @GetMapping("v1/browse/releases")
+    @GetMapping("v1/browse/new-releases")
     AlbumResponse getNewReleases(@RequestHeader("Authorization") String authorization);
 }
