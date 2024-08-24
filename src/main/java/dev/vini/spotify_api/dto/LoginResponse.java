@@ -1,4 +1,4 @@
-package dev.vini.spotify_api.client;
+package dev.vini.spotify_api.dto;
 
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;

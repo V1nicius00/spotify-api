@@ -1,4 +1,6 @@
-package dev.vini.spotify_api.client;
+package dev.vini.spotify_api.dto;
+
+import dev.vini.spotify_api.model.Show;
 
 import java.util.List;
 

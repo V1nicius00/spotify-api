@@ -1,4 +1,4 @@
-package dev.vini.spotify_api.client;
+package dev.vini.spotify_api.model;
 
 public class Show {
 
